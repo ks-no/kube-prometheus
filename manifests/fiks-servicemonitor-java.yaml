@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: fiks-java
+  namespace: monitoring
+  labels:
+    k8s-app: prometheus
+spec:
+  endpoints:
+    - interval: 10s
+      path: /metrics
+      port: web
+  selector:
+    matchLabels:
+      tier: java
