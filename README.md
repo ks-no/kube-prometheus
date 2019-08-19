@@ -3,6 +3,8 @@
 - Laget NodePort for Prometheus, Grafana og Alertmanager
 - node-exporter-serviceaccounten må ha ekstra tilganger i minishift:  
   `oc adm policy add-scc-to-user hostaccess system:serviceaccount:monitoring:node-exporter`
+- Kan være nødvendig å sette label på noden:  
+  `oc label node localhost kubernetes.io/os=linux`
 
 # kube-prometheus
 
