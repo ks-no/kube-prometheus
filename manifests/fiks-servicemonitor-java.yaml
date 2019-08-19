@@ -13,3 +13,6 @@ spec:
   selector:
     matchLabels:
       tier: java
+  namespaceSelector:
+    matchNames:
+      - fiks-dev
