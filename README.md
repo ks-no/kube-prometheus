@@ -1,3 +1,9 @@
+# Endringer for deploy på Minishift
+- Endret runAsUser for alle deployments
+- Laget NodePort for Prometheus, Grafana og Alertmanager
+- node-exporter-serviceaccounten må ha ekstra tilganger i minishift:  
+  `oc adm policy add-scc-to-user hostaccess system:serviceaccount:monitoring:node-exporter`
+
 # kube-prometheus
 
 > Note that everything is experimental and may change significantly at any time.

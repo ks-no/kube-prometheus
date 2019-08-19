@@ -71,7 +71,7 @@ spec:
         kubernetes.io/os: linux
       securityContext:
         runAsNonRoot: true
-        runAsUser: 65534
+        runAsUser: 1000220000
       serviceAccountName: node-exporter
       tolerations:
       - operator: Exists
