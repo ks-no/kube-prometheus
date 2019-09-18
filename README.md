@@ -5,6 +5,8 @@
   `oc adm policy add-scc-to-user hostaccess system:serviceaccount:monitoring:node-exporter`
 - Kan være nødvendig å sette label på noden:  
   `oc label node localhost kubernetes.io/os=linux`
+- Prometheus-operator service account kan trenge ekstra rettigheter:  
+  `oc adm policy add-scc-to-user privileged system:serviceaccount:monitoring:prometheus-operator`
 
 # kube-prometheus
 
